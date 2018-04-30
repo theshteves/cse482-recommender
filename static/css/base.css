@@ -1,0 +1,109 @@
+html, body {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #ddd;
+    color: #222;
+}
+body * { font-family: 'Quicksand', sans-serif; }
+
+header {
+    /*background-color: #d0021b;*/
+    /*background-color: #f81c1c;*/
+    background-color: #3e6fa3;
+    margin-left: -1rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+	/* border-bottom: 10px solid #ddd; */
+}
+header * { font-family: 'Special Elite', cursive; }
+header > a > h1 {
+    font-size: 52pt;
+    color: #fff;
+}
+header > p {
+    margin-top: 0;
+    font-size: 14pt;
+    color: #222;
+}
+
+h1 { margin: 0; }
+a, a > h1, a > p { text-decoration: None; }
+
+.content-block { 
+    margin-top: 1rem;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+/* Stylish buttons */
+button {
+  background: #d0d0d0;
+  background-image: -webkit-linear-gradient(top, #d0d0d0, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #d0d0d0, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #d0d0d0, #e0e0e0);
+  background-image: -o-linear-gradient(top, #d0d0d0, #e0e0e0);
+  background-image: linear-gradient(to bottom, #d0d0d0, #e0e0e0);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  border: 0;
+  color: #3e6fae;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  color: #ddd;
+  background: #d0d0d0;
+  background-image: -webkit-linear-gradient(top, #114281, #3e6fae);
+  background-image: -moz-linear-gradient(top, #114281, #3e6fae);
+  background-image: -ms-linear-gradient(top, #114281, #3e6fae);
+  background-image: -o-linear-gradient(top, #114281, #3e6fae);
+  background-image: linear-gradient(to bottom, #114281, #3e6fae);
+  text-decoration: none;
+}
+
+/* Fade in methods */
+.toggle-content-slow {
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
+}
+.toggle-content {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

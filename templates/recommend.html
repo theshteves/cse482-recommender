@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Recommend{% endblock %}
+
+{% block css %}
+{% load static %}
+<link rel='stylesheet' href='{% static 'css/recommend.css' %}'>
+{% endblock %}
+
+{% block content %}
+<h1>Welcome, {{ user }}!  Rate the following products</h1>
+<form method="post" action="/recommend?user={{ user }}">
+    {% csrf_token %}
+    <p>
+        {{ form.r1.errors }}
+        <img src="{{ products.0.1 }}" alt="{{ products.0.2 }}" height="64" width="64">
+        {{ products.0.2 }}
+        {{ form.r1 }}
+    </p>
+    <p>
+        {{ form.r2.errors }}
+        <img src="{{ products.1.1 }}" alt="{{ products.1.2 }}" height="64" width="64">
+        {{ products.1.2 }}
+        {{ form.r2 }}
+    </p>
+    <p>
+        {{ form.r3.errors }}
+        <img src="{{ products.2.1 }}" alt="{{ products.2.2 }}" height="64" width="64">
+        {{ products.2.2 }}
+        {{ form.r3 }}
+    </p>
+    <p>
+        {{ form.r4.errors }}
+        <img src="{{ products.3.1 }}" alt="{{ products.3.2 }}" height="64" width="64">
+        {{ products.3.2 }}
+        {{ form.r4 }}
+    </p>
+    <p>
+        {{ form.r5.errors }}
+        <img src="{{ products.4.1 }}" alt="{{ products.4.2 }}" height="64" width="64">
+        {{ products.4.2 }}
+        {{ form.r5 }}
+    </p>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

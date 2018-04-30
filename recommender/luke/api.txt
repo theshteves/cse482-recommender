@@ -1,0 +1,18 @@
+FROM web-interface TO luke (That's what I'm going to track but I'll just send you the reviews list))
+{
+    'username': '',
+    'reviews': [
+        (product-id, user-rating),
+        (product-id, user-rating),
+        (product-id, user-rating),
+        (product-id, user-rating),
+        (product-id, user-rating) # Force to a length-5 tuple?  Are we going to always do 5?
+    ]
+}
+
+FROM luke TO web-interface ???
+[
+    product-id,
+    product-id,
+    product-id # If always returns 3, might as well do a tuple
+]

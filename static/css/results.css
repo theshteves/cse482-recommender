@@ -1,0 +1,59 @@
+#loader > h2 {
+    font-style: italic;
+    color: #d0021b;
+}
+
+#response { display: none; }
+#response > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LOADING ANIMATION */
+.container {
+    display: flex;
+    max-width: 400px;
+    bottom: 2rem;
+    right: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+    animation: spin 10s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+svg {
+	max-width: 25rem;
+	width: 100%;
+	height: auto;
+}
+
+.masking {
+	transform: scale(0);
+	transform-origin: 50% 50%;
+	animation: scale 4s linear infinite;
+	will-change: transform;
+}
+
+@keyframes scale {
+	0%, 50% { opacity: 1; }
+	100% {
+		transform: scale(1.25);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(359.9999deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359.9999deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359.9999deg);}
+}
